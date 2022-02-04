@@ -18,6 +18,6 @@ CREATE TABLE reviews (
   content TEXT NOT NULL,
   rating INT,
   CHECK (rating >= 0 AND rating <= 5),
-  FOREIGN KEY anime_id INTEGER REFERENCES anime (id)
+  anime_id INTEGER REFERENCES anime (id)
     ON DELETE CASCADE
 )
